@@ -1,0 +1,184 @@
+% \title{Resume}
+% \author{Fernando Remes}
+% \date{August 2025}
+% Description: Resume using LaTeX programming for a proper, modern, and professional look. 
+% This resume outlines my current Education, Related Project Experience, Certifications/Awards, and Skills. 
+
+\documentclass[hidelinks,letterpaper,10pt]{article} % Globaling decalring hidelinks, Setting up document as a letterpaper [standard] with 10pt text font style
+\usepackage[letterpaper, margin = {0.6in} ]{geometry} % Update paper to be a4 standard with margin "0.6 inches" on all sides
+\usepackage[english]{babel} % Sets document language to English. (proper hyphenation & text rules).
+\usepackage[T1]{fontenc} % Encode fonts to be all the same, including accented letters
+\usepackage{newtxtext,newtxmath} % set default font to new modern Times New Roman
+\usepackage{tabularx} % Package for flexible column-width tables.
+\usepackage{hyperref} % Add hyperlinks to text
+\usepackage{enumitem} % Take user control over environment layout with itemize (Bullet points)
+
+%custom \section
+\usepackage{titlesec} % Allows for custom section titles (format & spacing).
+\usepackage{multicol} % Split content into multiple columns
+\usepackage{multirow} % Split content into multiple rows
+
+\titleformat{\section}{\Large\scshape\bfseries\raggedright}{}{0em}{}[\titlerule] % Defining how section titles should look; Large text; Small caps size; Text to the left; No numbers; No space between Title and horizontal line; [\titlerule] is teh horizontal line
+\titlespacing{\section}{0pt}{2pt}{7pt} % Including 2pts of space at the top and 7pts for the bottom
+\linespread{0.7} %Set line spacing factor to 0.7 for more compact text.
+\setlength{\parskip}{0pt} %Set space between paragraphs to 0 points to waste less space.
+\setlength{\parsep}{0pt} %Set space between paragraphs within lists to 0 points to waste less space.
+\renewcommand{\arraystretch}{0.70} % Height of array changed to 70% its original height
+
+\pagestyle{empty} % No page numbers
+
+\begin{document} % The start of the page
+    \begin{center} % This section is centered
+    \Huge{Fernando H. Remes} \\[9pt] % Name with newline of 9pts spacing
+    % My Contacts
+    \small  \ $|$ \  { El Paso, TX. 79915 } \ $|$ \ \href{tel:+19152288292}{(915) 228-8292 } \ $|$ \ 
+    \href{mailto:nandoremes@gmail.com}{\underline {nandoremes@gmail.com}} \ $|$ \ \href{https://github.com/FernRemes}{\underline{github.com/FernRemes}} \ $|$ \ \\[3pt] \href{https://www.linkedin.com/in/fernremes/}{\underline{linkedin.com/in/fernremes}} \ $|$ \ 
+    \href{https://fhremes.vercel.app/}
+    {\underline{fhremes.vercel.app}}
+    % {End of Contacts}
+    \end{center}
+
+% Section 1
+     
+    \section{Education}
+    % UTEP Education
+    \begin{itemize}
+        
+        \item[]
+        % Begin new table spanning the full text width. Multi-Column Table
+        \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}} \large\textbf{The University of Texas at El Paso (UTEP)} & \normalsize\textit{December 2024} 
+        \end{tabular*}
+        % Begin new table spanning the full text width. Multi-Column Table
+        \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}} 
+        \hspace{2mm}\textit{Bachelor of Science in Computer Science} & \textit{GPA: 3.71/4.00} 
+        \end{tabular*} 
+        % New bullet point table with bullets rather than dashes
+        \begin{itemize}[label=\textbullet]
+            % Move up 2pts
+            \vspace{-2pt}
+            \item Concentration in Secure Cyber Systems
+            \item Minor in Mathematics
+        \end{itemize}
+    \end{itemize}
+    
+    % EPCC Education
+    \begin{itemize}
+        \item[]
+        % Begin new table spanning the full text width. Multi-Column Table
+        \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}} \large\textbf{El Paso Community College (EPCC)} & \normalsize\textit{July 2022} 
+        \end{tabular*}
+        % Begin new table spanning the full text width. Single column table
+        \begin{tabular*}{\linewidth}{@{}l@{}}
+        \hspace{2mm}\textit{Associates of Arts Degree in Computer Science}  
+        \end{tabular*} 
+    \end{itemize}
+
+% Section 2
+    \section{Certifications \& Achievements}
+    \begin{itemize}
+        \item[]
+        % Begin new table spanning the full text width. Single column table
+        \begin{tabular*}{\linewidth}{@{}l@{}}
+        \large\textbf{\underline{Certifications}}  
+        \end{tabular*} 
+        % Spacing -4pts from the top
+        \vspace{-4pt}
+        \begin{itemize}[label=\textbullet]
+            \item AWS Cloud Support Associate Professional Certificate
+            \item Google Cybersecurity Certificate 
+            \item Google IT Support Professional Certificate 
+            
+        \end{itemize}
+        % Spacing -4pts from the top
+        \vspace{-4pt}
+        \begin{tabular*}{\linewidth}{@{}l@{}}
+        \large\textbf{\underline{Achievements}}  
+        \end{tabular*}
+        % Spacing -4pts from the top
+        \vspace{-4pt}
+        \begin{itemize}[label=\textbullet]
+            \item First Place [Hackathon/Capture the Flag], November 2024.
+            \item First Place [FBLA Competition - Website Design], February 2020.
+        \end{itemize}
+    \end{itemize}
+
+% Section 3
+    \section{Related Project Experience}
+    \begin{itemize}
+        \item[]
+        \begin{tabular*}{\linewidth}{@{}l@{}} \large\textbf{INFILTR8} $-$
+         \normalsize{Capstone Project}  $-$
+         \normalsize{Team Leader} $-$
+         \normalsize{2024}  
+        \end{tabular*}
+         % Spacing -6pts from the top
+        \vspace{-6pt}
+        \begin{itemize}[label=\textbullet]
+        \small
+            \item A yearlong industry-sponsored project with DEVCOM (U.S. Army Combat Capabilities Development Command) to build a Full-Stack Web Reconnaissance Analysis Tool.
+            \item Led a team using Agile methodology to incorporate importing recon files, filter into a table in order of security vulnerabilities, and export as a PDF or Excel file, while containing a user-friendly interface.
+            \item Directed team roles, role responsibilities, and ensured project milestones were achieved within the deadlines.
+            \item Developed in Svelte, Python, \& Neo4J
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item[]
+        \begin{tabular*}{\linewidth}{@{}l@{}} \large\textbf{Fallen Empire} $-$
+         \normalsize{Course Project}  $-$
+         \normalsize{Team Co-Leader} $-$
+         \normalsize{Spring 2024}  
+        \end{tabular*}
+         % Spacing -6pts from the top
+        \vspace{-6pt}
+        \begin{itemize}[label=\textbullet]
+        \small
+            \item  Simulated a Command \& Control (C2) system using PowerShell-Empire, a post-exploitation agent, with Windows PowerShell. Using Kali Linux to create an attack script on vulnerable Operating Systems. Our research led us to learn how attackers infect OS and how Empire detects the virus.
+            \item Developed and facilitated an in-class exercise that allowed students to replicate the simulation.
+            \item Presented project through an engaging PowerPoint presentation and video format.
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item[]
+        \begin{tabular*}{\linewidth}{@{}l@{}} \large\textbf{Ticketminer [Ticketmaster Clone]} $-$
+         \normalsize{Course Project}  $-$
+         \normalsize{Design Lead} $-$
+         \normalsize{Fall 2023}  
+        \end{tabular*}
+         % Spacing -6pts from the top
+        \vspace{-6pt}
+         \begin{itemize}[label=\textbullet]
+            \small
+            \item Ticketminer, a Ticketmaster-inspired application, allowed a user to sign in and log in to "purchase" tickets for various events and view an invoice confirming their "purchase", and allowed admins to 
+    "create" events with valid upcoming date and time for the users, cancel events, and refund users from events. 
+            \item Led the design of a user-friendly terminal interface, ensuring intuitive navigation and feature accessibility.
+            \item Developed in Java \& Terminal environment
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item[]
+        \begin{tabular*}{\linewidth}{@{}l@{}} \large\textbf{PyTorch Digit Recognition} $-$
+         \normalsize{Personal Project}  $-$
+         \normalsize{Summer 2024}  
+        \end{tabular*}
+        % Spacing -6pts from the top
+        \vspace{-6pt}
+        \begin{itemize}[label=\textbullet]
+            \small
+            \item Demonstrating the process of training and evaluating a 
+    machine learning model.
+            \item Trained a model on a dataset of handwritten digits and evaluated its performance, achieving accurate digit recognition by retrieving predictions from a selected index.
+            
+        \end{itemize}
+    \end{itemize}
+% Section 4
+\section{Skills}
+    \begin{itemize} 
+        % \item[] removes bullet points
+        \item[] \textbf{Programming Languages:} Java, Python, C/C++, HTML, CSS, JavaScript, Scala, x86 Assembly, \& Markdown
+        \item[] \textbf{Frameworks \& Databases:} ReactJS, Svelte, PyTorch, MySQL, NoSQL, \& Neo4J
+        \item[] \textbf{Operating Systems:} Windows 10/11, Linux, Ubuntu, \& Kali Linux 
+        \item[] \textbf{Networking \& Security:} Wireshark, DNS, TCP/IP, \& Networking/Subnetting
+        \item[] \textbf{CyberSecurity Tools:} PowerShell Empire, IDA Pro, Ghidra, \& DShell
+    \end{itemize}
+
+\end{document}
